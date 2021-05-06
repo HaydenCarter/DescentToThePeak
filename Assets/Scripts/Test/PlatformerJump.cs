@@ -31,7 +31,7 @@ public class PlatformerJump : MonoBehaviour
     bool _jumping = false;
     void InputCheck()
     {
-        if (Input.GetButtonDown(_jumpAxis) && _grounded || _isOnWall)
+        if (Input.GetButtonDown(_jumpAxis) && _grounded || Input.GetButtonDown(_jumpAxis) && _isOnWall)
         {
             _jumping = true;
         }
@@ -55,6 +55,8 @@ public class PlatformerJump : MonoBehaviour
             }
 
             SetGrounded(true);
+            SetOnWall(false);
+            Universe.Instance.Stamina = Universe.Instance.MaxStamina;
             _OnGrounded.Invoke();
         }
         if (!_groundCheckLeft && !_groundCheckRight)
@@ -67,6 +69,7 @@ public class PlatformerJump : MonoBehaviour
     public void SetOnWall(bool isOnWall)
     {
         _isOnWall = isOnWall;
+        _animator.SetBool("WallStick", _isOnWall); // land anim
     }
 
     public void SetGrounded(bool isGrounded)
@@ -96,7 +99,7 @@ public class PlatformerJump : MonoBehaviour
     {
         if (_groundCheckLeft || _groundCheckRight)
             _rb.gravityScale = 0;
-        else if (!_groundCheckLeft && !_groundCheckRight)
+        else if (!_groundCheckLeft && !_groundCheckRight && !_isOnWall)
             _rb.gravityScale = _gravity.Value * _fallMultiplier.Value;
     }
 
@@ -129,7 +132,7 @@ public class PlatformerJump : MonoBehaviour
     #endregion
 
     #region HELPERS
-    void Jump() { _rb.AddForce(Vector2.up * _jumpForce.Value, ForceMode2D.Impulse); SetGrounded(false); _animator.SetBool("WallStick", false); _OnJump.Invoke(); }
+    public void Jump() { _rb.AddForce(Vector2.up * _jumpForce.Value, ForceMode2D.Impulse); SetGrounded(false); _animator.SetBool("WallStick", false); _OnJump.Invoke(); }
     void JumpHeightController() { if (_jumping) _jumping = false; }
     void FallingCheck() => _animator.SetFloat("VelocityY", _rb.velocity.y);
     void CyoteTime() { _grounded = false; _animator.SetBool("Grounded", false); _wasJumping = true; } //jump anim

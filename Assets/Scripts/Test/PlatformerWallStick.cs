@@ -65,6 +65,7 @@ public class PlatformerWallStick : MonoBehaviour
         if(_jumpHor)
         {
             Universe.Instance.Stamina += 4;
+            _OnOffWall?.Invoke();
             JumpHorizontally();
             _jumpHor = false;
         }
@@ -92,21 +93,20 @@ public class PlatformerWallStick : MonoBehaviour
             _rb.velocity = Vector2.zero;
             _rb.gravityScale = 0;
             _gooVfx.Pause();
+            _OnWall.Invoke();
             //_groundCheckDistance.Value = _groundCheckDistanceOffset;
 
             if (Input.GetButtonDown(_jumpAxis))
             {
                 _jumpHor = true;
-                _OnOffWall?.Invoke();
             }
         }
 
         if (!_wallCheck && !_backCheck)
         {
-            //_groundCheckDistance.Value = _originalGroundCheckDistance;           
-            _animator.SetBool("WallStick", false);
-
-            if(_rb.velocity.x < -0.1f)
+            _groundCheckDistance.Value = _originalGroundCheckDistance;            
+            _animator.SetBool("WallStick", false);            
+            if (_rb.velocity.x < -0.1f)
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             else if (_rb.velocity.x > 0.1f)
                 transform.rotation = Quaternion.Euler(0, 0, 0);

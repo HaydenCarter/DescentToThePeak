@@ -60,7 +60,7 @@ public class PlatformerMovement : MonoBehaviour
     #region UNITY
     void FixedUpdate()
     { 
-       // if (!_animator.GetBool("WallStick") && _inputEnabled)
+        if (!_animator.GetBool("WallStick") && _inputEnabled)
             Move(_direction.x); 
     }
     #endregion
