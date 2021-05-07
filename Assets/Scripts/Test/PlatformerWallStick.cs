@@ -30,8 +30,8 @@ public class PlatformerWallStick : MonoBehaviour
     #endregion
 
     RaycastHit2D _wallHit;
-    bool _wallCheck = false;
-    bool _backCheck = false;
+    public bool _wallCheck = false;
+    public bool _backCheck = false;
     bool _jumping = false;
     void WallCheck()
     {
@@ -46,17 +46,15 @@ public class PlatformerWallStick : MonoBehaviour
           new Vector2(transform.localRotation.y == 0 ? -_wallBackCheckDistance.Value : _wallBackCheckDistance.Value, 0),
           Mathf.Abs(_wallBackCheckDistance.Value),
           _wallLayer);
-
-        _wallHit = Physics2D.Raycast(
-          new Vector2(transform.localPosition.x, transform.localPosition.y + _wallCheckDistanceYoffset.Value),
-          new Vector2(transform.localRotation.y == 0 ? _wallCheckDistance.Value : -_wallCheckDistance.Value, 0),
-          Mathf.Abs(_wallCheckDistance.Value),
-          _wallLayer);
     }
 
     void JumpHorizontally() => _rb.AddForce(transform.right * _jumpHorForce.Value, ForceMode2D.Impulse);
 
     #region UNITY
+    private void Awake()
+    {
+        _climbing = GetComponent<Climbing>();
+    }
     void Start() => _wallSplatVfx.Pause();
 
     bool _jumpHor = false;
@@ -71,8 +69,15 @@ public class PlatformerWallStick : MonoBehaviour
         }
     }
 
+    bool _grounded = false;
+    public void IsGrounded(bool val) => _grounded = val;
+    bool _wasOnWall = false;
+    Climbing _climbing;
+    [SerializeField] GameObject _invisibleWall;
     void Update()
     {
+        if (_grounded) return;
+
         WallCheck();
 
         if (_wallCheck)
@@ -90,11 +95,13 @@ public class PlatformerWallStick : MonoBehaviour
         else
         {
             _wallSplatVfx.Play();
+
+            if (_climbing.isSliding) return;
             _rb.velocity = Vector2.zero;
             _rb.gravityScale = 0;
+            
             _gooVfx.Pause();
             _OnWall.Invoke();
-            //_groundCheckDistance.Value = _groundCheckDistanceOffset;
 
             if (Input.GetButtonDown(_jumpAxis))
             {
@@ -104,15 +111,22 @@ public class PlatformerWallStick : MonoBehaviour
 
         if (!_wallCheck && !_backCheck)
         {
-            _groundCheckDistance.Value = _originalGroundCheckDistance;            
+            _invisibleWall.SetActive(false);
             _animator.SetBool("WallStick", false);            
             if (_rb.velocity.x < -0.1f)
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             else if (_rb.velocity.x > 0.1f)
                 transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            if (_wasOnWall)
+            {
+                _OnOffWall?.Invoke();
+                _wasOnWall = false;
+            }
         }
         else
         {
+            _wasOnWall = true;
             _animator.SetBool("WallStick", true);
         }
     }
