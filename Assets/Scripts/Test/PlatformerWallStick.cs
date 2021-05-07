@@ -63,6 +63,7 @@ public class PlatformerWallStick : MonoBehaviour
         if(_jumpHor)
         {
             Universe.Instance.Stamina += 4;
+            _invisibleWall.SetActive(false);
             _OnOffWall?.Invoke();
             JumpHorizontally();
             _jumpHor = false;
@@ -95,11 +96,6 @@ public class PlatformerWallStick : MonoBehaviour
         else
         {
             _wallSplatVfx.Play();
-
-            if (_climbing.isSliding) return;
-            _rb.velocity = Vector2.zero;
-            _rb.gravityScale = 0;
-            
             _gooVfx.Pause();
             _OnWall.Invoke();
 
@@ -107,6 +103,10 @@ public class PlatformerWallStick : MonoBehaviour
             {
                 _jumpHor = true;
             }
+
+            if (_climbing.isSliding) return;
+            _rb.velocity = Vector2.zero;
+            _rb.gravityScale = 0;
         }
 
         if (!_wallCheck && !_backCheck)
