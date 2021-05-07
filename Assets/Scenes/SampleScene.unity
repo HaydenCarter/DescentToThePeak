@@ -4095,8 +4095,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2616901682246303980, guid: 14e27af68181a4549b89e51f5d0bcf91, type: 3}
       propertyPath: m_Size.y
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2616901682246303980, guid: 14e27af68181a4549b89e51f5d0bcf91, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8066128649685397002, guid: ab9d7ac7e61d62a41835e5eef5c6dc32, type: 3}
     - target: {fileID: 2616901682246303981, guid: 14e27af68181a4549b89e51f5d0bcf91, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -4485,7 +4489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d417f46b401df447a173ab70d5f9f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  climbingSpeed: 2800
+  climbingSpeed: 5500
   delayTime: 0.5
   isClimbing: 0
   _rb: {fileID: 2061310459}
