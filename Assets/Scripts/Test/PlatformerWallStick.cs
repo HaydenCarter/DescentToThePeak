@@ -62,7 +62,7 @@ public class PlatformerWallStick : MonoBehaviour
     {
         if(_jumpHor)
         {
-            Universe.Instance.Stamina += 4;
+            Universe.Instance.Stamina += 3;
             _invisibleWall.SetActive(false);
             _OnOffWall?.Invoke();
             JumpHorizontally();
