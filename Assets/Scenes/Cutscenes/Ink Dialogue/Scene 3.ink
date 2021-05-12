@@ -1,10 +1,11 @@
-#textbbox show
+#textbox show
 #timeline pause
 #nametag Drake
 Look who finally decided to show up!
 #nametag Tony
 We were starting to get worried.
 #nametag Joe
+...
 #timeline play
 #textbox hide
 ...

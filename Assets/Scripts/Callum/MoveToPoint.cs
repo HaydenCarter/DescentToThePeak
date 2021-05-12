@@ -32,10 +32,13 @@ public class MoveToPoint : MonoBehaviour
             moving = false;
         }
         if (newMoveTrigger == true)
-            if ((Vector3.Distance(transform.position, currentEndMarker.position) == 0))
-                {
+        {
+            if ((Vector3.Distance(transform.position, currentEndMarker.position) == 0) && moving == false)
+            {
+                newMoveTrigger = false;
                 MoveToNew();
-                }
+            }
+        }
     }
     public void Move()
     {
