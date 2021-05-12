@@ -84,6 +84,9 @@ public class PlatformerJump : MonoBehaviour
             _animator.SetBool("Grounded", _grounded); // land anim
             _grounded = isGrounded;
         }
+
+        if (isGrounded)
+            _wasSliding = false;
     }
 
     bool SingleGroundCheck(float xPos)
@@ -95,6 +98,14 @@ public class PlatformerJump : MonoBehaviour
           _groundLayer);
     }
 
+    bool _wasSliding = false;
+
+    public void WasSliding(bool wasSliding)
+    {
+        _wasSliding = wasSliding;
+    }
+
+    public Climbing _climbing;
     void ChangeGravity()
     {
         if (_groundCheckLeft || _groundCheckRight)
@@ -132,7 +143,7 @@ public class PlatformerJump : MonoBehaviour
     #endregion
 
     #region HELPERS
-    public void Jump() { _rb.AddForce(Vector2.up * _jumpForce.Value, ForceMode2D.Impulse); SetGrounded(false); _rb.gravityScale = _gravity.Value; _animator.SetBool("WallStick", false); _OnJump.Invoke(); }
+    public void Jump() { _rb.AddForce(Vector2.up * _jumpForce.Value, ForceMode2D.Impulse); SetGrounded(false); _rb.gravityScale = _gravity.Value * _fallMultiplier.Value; _OnJump.Invoke(); }
     void JumpHeightController() { if (_jumping) _jumping = false; }
     void FallingCheck() => _animator.SetFloat("VelocityY", _rb.velocity.y);
     void CyoteTime() { _grounded = false; _animator.SetBool("Grounded", false); _wasJumping = true; } //jump anim

@@ -14,7 +14,7 @@ public class Fade : MonoBehaviour
     CanvasGroup canvasGroup;
 
 
-    void Start()
+    void Awake()
     {
         canvasGroup = this.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
@@ -31,6 +31,7 @@ public class Fade : MonoBehaviour
         timeSoFar = 0;
         fading = true;
         StartCoroutine(FadeCoroutine());
+        Debug.Log("Fading In");
     }
 
     public void FadeOut()
@@ -40,6 +41,7 @@ public class Fade : MonoBehaviour
         timeSoFar = 0;
         fading = true;
         StartCoroutine(FadeCoroutine());
+        Debug.Log("Fading Out");
     }
 
     IEnumerator FadeCoroutine()

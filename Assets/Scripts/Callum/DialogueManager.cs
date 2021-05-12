@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current[Key.Space].wasPressedThisFrame && canInteract)
+        if (Input.GetKeyDown(KeyCode.Space) && canInteract)
         {
             //Is there more to the story?
             if (story.canContinue)

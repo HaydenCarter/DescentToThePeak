@@ -15,58 +15,97 @@ public class Climbing : MonoBehaviour
     bool hasSlid = false;
     [SerializeField] PlatformerWallStick _wallStickInstance;
 
+    [SerializeField] SoFloat _gravity;
+    [SerializeField] SoFloat _fallMultiplier;
     [SerializeField] SoFloat _wallCheckDistanceYoffset;
     [SerializeField] SoFloat _wallBackCheckDistance;
-    [SerializeField] SoFloat _wallCheckDistance;
-    [SerializeField] SoFloat _gravity;
+    [SerializeField] SoFloat _jumpHorForce;
 
     [SerializeField] GameObject _invisibleWall;
+
+    public GameEvent _OnSlide;
+
+    void JumpHorizontally()
+    {
+        Universe.Instance.Stamina += 3;
+        _rb.AddForce(transform.right * _jumpHorForce.Value, ForceMode2D.Impulse);    
+        isSliding = false;
+        _wallStickInstance.enabled = true;
+    }
+
     float direction;
     void Update()
     {
-        if (!_playMovement)
+        _backCheck = Physics2D.Raycast(
+          new Vector2(transform.localPosition.x, transform.localPosition.y + _wallCheckDistanceYoffset.Value),
+          new Vector2(transform.localRotation.y == 0 ? -_wallBackCheckDistance.Value : _wallBackCheckDistance.Value, 0),
+          Mathf.Abs(_wallBackCheckDistance.Value),
+          _wallLayer);
+
+        if (!_backCheck)
         {
-            if (_wallStickInstance._backCheck == true)
+            isSliding = false;
+            _rb.gravityScale = _gravity.Value * _fallMultiplier.Value;
+        }
+
+        if (_backCheck)
+        {
+            if (!_playMovement)
             {
-                if (isSliding)
+                if (_wallStickInstance._backCheck)
                 {
-                    _rb.gravityScale = 5;
-                    _invisibleWall.SetActive(false);
-                }
-
-                if (Universe.Instance.Stamina > 0)
-                {
-                    isSliding = false;
-                    hasSlid = false;
-                    if (Input.GetButtonDown("Vertical"))
+                    if (isSliding)
                     {
-                        _playMovement = true;
-                        _invisibleWall.SetActive(true);
-                        Universe.Instance.Stamina += -1;
-                        direction = Input.GetAxisRaw("Vertical");
+                        if (Input.GetKeyDown(KeyCode.Space))
+                        {
+                            JumpHorizontally();
+                            return;
+                        }
+
+                        _wallStickInstance.enabled = false;
+
+
+                        _rb.gravityScale = 5;
+
+                        _invisibleWall.SetActive(false);
                     }
-                }
-                else
-                {
-                    _rb.gravityScale = 5;
 
-                    if (!hasSlid)
+                    if (Universe.Instance.Stamina > 0)
                     {
-                        isSliding = true;
-                        hasSlid = true;
+                        isSliding = false;
+                        hasSlid = false;
+                        if (Input.GetButtonDown("Vertical"))
+                        {
+                            _playMovement = true;
+                            _invisibleWall.SetActive(true);
+                            Universe.Instance.Stamina += -1;
+                            direction = Input.GetAxisRaw("Vertical");
+                        }
+                    }
+                    else
+                    {
+                        _rb.gravityScale = 5;
+
+                        if (!hasSlid)
+                        {
+                            isSliding = true;
+                            _OnSlide?.Invoke();
+                            hasSlid = true;
+                        }
                     }
                 }
             }
+            else
+            {
+                StartCoroutine("stopClimb");
+            }
         }
-        else
-        {
-            StartCoroutine("stopClimb");
-            //Invoke("stopClimb", delayTime);
-        }
+            
     }
 
     public void CancelSlide()
     {
+        _wallStickInstance.enabled = true;
     }
 
     private void FixedUpdate()
@@ -81,6 +120,8 @@ public class Climbing : MonoBehaviour
     }
 
     bool _playMovement = false;
+    private bool _backCheck;
+    public LayerMask _wallLayer;
 
     IEnumerator stopClimb()
     {
@@ -93,4 +134,11 @@ public class Climbing : MonoBehaviour
         }
         StopCoroutine("stopClimb");
     }
+
+    #region GIZMOS
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(new Vector2(transform.localPosition.x, transform.localPosition.y + _wallCheckDistanceYoffset.Value), new Vector2(transform.localRotation.y == 0 ? -_wallBackCheckDistance.Value : _wallBackCheckDistance.Value, 0));
+    }
+    #endregion
 }
