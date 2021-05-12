@@ -14,7 +14,7 @@ public class Fade : MonoBehaviour
     CanvasGroup canvasGroup;
 
 
-    void Start()
+    void Awake()
     {
         canvasGroup = this.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
