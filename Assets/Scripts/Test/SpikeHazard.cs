@@ -35,7 +35,7 @@ public class SpikeHazard : MonoBehaviour
     #region GIZMOS
     private void OnDrawGizmos()
     {
-        Gizmos.DrawCube(new Vector3(transform.position.x + _positionOffset.x, transform.position.y - _positionOffset.y, 0), _spikeColliderSize);
+        Gizmos.DrawWireCube(new Vector3(transform.position.x + _positionOffset.x, transform.position.y - _positionOffset.y, 0), _spikeColliderSize);
     }
     #endregion
 }

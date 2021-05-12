@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: side_mid_unclibable 1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: dce0c1ef5befe2b4bb59b78776add45f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f51c67d81105f7498dccf12dfdf04b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
