@@ -48,55 +48,59 @@ public class Climbing : MonoBehaviour
             _rb.gravityScale = _gravity.Value * _fallMultiplier.Value;
         }
 
-        if (!_playMovement)
+        if (_backCheck)
         {
-            if (_wallStickInstance._backCheck)
+            if (!_playMovement)
             {
-                if (isSliding)
+                if (_wallStickInstance._backCheck)
                 {
-                    if (Input.GetKeyDown(KeyCode.Space))
+                    if (isSliding)
                     {
-                        JumpHorizontally();
-                        return;
+                        if (Input.GetKeyDown(KeyCode.Space))
+                        {
+                            JumpHorizontally();
+                            return;
+                        }
+
+                        _wallStickInstance.enabled = false;
+
+
+                        _rb.gravityScale = 5;
+
+                        _invisibleWall.SetActive(false);
                     }
-                    
-                    _wallStickInstance.enabled = false;
 
-
-                    _rb.gravityScale = 5;
-
-                    _invisibleWall.SetActive(false);
-                }
-
-                if (Universe.Instance.Stamina > 0)
-                {                  
-                    isSliding = false;
-                    hasSlid = false;
-                    if (Input.GetButtonDown("Vertical"))
+                    if (Universe.Instance.Stamina > 0)
                     {
-                        _playMovement = true;
-                        _invisibleWall.SetActive(true);
-                        Universe.Instance.Stamina += -1;
-                        direction = Input.GetAxisRaw("Vertical");
+                        isSliding = false;
+                        hasSlid = false;
+                        if (Input.GetButtonDown("Vertical"))
+                        {
+                            _playMovement = true;
+                            _invisibleWall.SetActive(true);
+                            Universe.Instance.Stamina += -1;
+                            direction = Input.GetAxisRaw("Vertical");
+                        }
                     }
-                }
-                else
-                {
-                    _rb.gravityScale = 5;
-
-                    if (!hasSlid)
+                    else
                     {
-                        isSliding = true;
-                        _OnSlide?.Invoke();
-                        hasSlid = true;
+                        _rb.gravityScale = 5;
+
+                        if (!hasSlid)
+                        {
+                            isSliding = true;
+                            _OnSlide?.Invoke();
+                            hasSlid = true;
+                        }
                     }
                 }
             }
+            else
+            {
+                StartCoroutine("stopClimb");
+            }
         }
-        else
-        {
-            StartCoroutine("stopClimb");
-        }
+            
     }
 
     public void CancelSlide()
