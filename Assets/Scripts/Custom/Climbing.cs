@@ -11,11 +11,14 @@ public class Climbing : MonoBehaviour
     public bool isClimbing = false;
     public Rigidbody2D _rb;
     public bool isSliding = false;
+    public Animator _animator;
+    bool hasSlid = false;
     [SerializeField] PlatformerWallStick _wallStickInstance;
 
     [SerializeField] SoFloat _wallCheckDistanceYoffset;
     [SerializeField] SoFloat _wallBackCheckDistance;
     [SerializeField] SoFloat _wallCheckDistance;
+    [SerializeField] SoFloat _gravity;
 
     [SerializeField] GameObject _invisibleWall;
     float direction;
@@ -27,13 +30,14 @@ public class Climbing : MonoBehaviour
             {
                 if (isSliding)
                 {
-                    _rb.gravityScale = 2;
+                    _rb.gravityScale = 5;
                     _invisibleWall.SetActive(false);
                 }
 
                 if (Universe.Instance.Stamina > 0)
                 {
                     isSliding = false;
+                    hasSlid = false;
                     if (Input.GetButtonDown("Vertical"))
                     {
                         _playMovement = true;
@@ -44,7 +48,13 @@ public class Climbing : MonoBehaviour
                 }
                 else
                 {
-                    isSliding = true;
+                    _rb.gravityScale = 5;
+
+                    if (!hasSlid)
+                    {
+                        isSliding = true;
+                        hasSlid = true;
+                    }
                 }
             }
         }
@@ -53,6 +63,10 @@ public class Climbing : MonoBehaviour
             StartCoroutine("stopClimb");
             //Invoke("stopClimb", delayTime);
         }
+    }
+
+    public void CancelSlide()
+    {
     }
 
     private void FixedUpdate()
@@ -74,6 +88,7 @@ public class Climbing : MonoBehaviour
         if (_playMovement)
         {
             Debug.Log("DEST REACHED");
+            _rb.velocity = Vector2.zero;
             _playMovement = false;
         }
         StopCoroutine("stopClimb");

@@ -87,6 +87,7 @@ public class PlatformerWallStick : MonoBehaviour
             _gooVfx.Pause();
             _rb.gameObject.transform.eulerAngles = new Vector3(0, _rb.gameObject.transform.eulerAngles.y == 0 ? 180 : 0, 0);
             _OnWall.Invoke();
+            _rb.gravityScale = 0;
         }
 
         if (!_backCheck)
@@ -103,10 +104,6 @@ public class PlatformerWallStick : MonoBehaviour
             {
                 _jumpHor = true;
             }
-
-            if (_climbing.isSliding) return;
-            _rb.velocity = Vector2.zero;
-            _rb.gravityScale = 0;
         }
 
         if (!_wallCheck && !_backCheck)
@@ -121,6 +118,7 @@ public class PlatformerWallStick : MonoBehaviour
             if (_wasOnWall)
             {
                 _OnOffWall?.Invoke();
+                _climbing.isSliding = false;
                 _wasOnWall = false;
             }
         }
