@@ -18,6 +18,7 @@ public class PlatformerWallStick : MonoBehaviour
 
     [Header("---SHARED---", order = 1)] //Scriptable Object Floats
     [SerializeField] SoFloat _gravity;
+    [SerializeField] SoFloat _fallMultiplier;
     [SerializeField] SoFloat _jumpHorForce;
     [SerializeField] SoFloat _wallCheckDistanceYoffset;
     [SerializeField] SoFloat _wallCheckDistance;
@@ -54,13 +55,14 @@ public class PlatformerWallStick : MonoBehaviour
     private void Awake()
     {
         _climbing = GetComponent<Climbing>();
+        _movement = GetComponent<PlatformerMovement>();
     }
     void Start() => _wallSplatVfx.Pause();
 
     bool _jumpHor = false;
     void FixedUpdate()
     {
-        if(_jumpHor)
+        if(_jumpHor && !_climbing.isSliding)
         {
             Universe.Instance.Stamina += 3;
             _invisibleWall.SetActive(false);
@@ -74,25 +76,25 @@ public class PlatformerWallStick : MonoBehaviour
     public void IsGrounded(bool val) => _grounded = val;
     bool _wasOnWall = false;
     Climbing _climbing;
+    PlatformerMovement _movement;
     [SerializeField] GameObject _invisibleWall;
     void Update()
     {
-        if (_grounded) return;
-
         WallCheck();
-
         if (_wallCheck)
         {          
             _wallSplatExplosionVfx.Play();
             _gooVfx.Pause();
             _rb.gameObject.transform.eulerAngles = new Vector3(0, _rb.gameObject.transform.eulerAngles.y == 0 ? 180 : 0, 0);
             _OnWall.Invoke();
+            _rb.velocity = Vector2.zero;
             _rb.gravityScale = 0;
         }
 
         if (!_backCheck)
         {
             _wallSplatVfx.Pause();
+            
         }
         else
         {
@@ -108,6 +110,11 @@ public class PlatformerWallStick : MonoBehaviour
 
         if (!_wallCheck && !_backCheck)
         {
+            _climbing.isSliding = false;
+
+            if(!_movement._isGrounded)
+                _rb.gravityScale = _gravity.Value * _fallMultiplier.Value;
+
             _invisibleWall.SetActive(false);
             _animator.SetBool("WallStick", false);            
             if (_rb.velocity.x < -0.1f)
@@ -118,7 +125,6 @@ public class PlatformerWallStick : MonoBehaviour
             if (_wasOnWall)
             {
                 _OnOffWall?.Invoke();
-                _climbing.isSliding = false;
                 _wasOnWall = false;
             }
         }
@@ -128,6 +134,8 @@ public class PlatformerWallStick : MonoBehaviour
             _animator.SetBool("WallStick", true);
         }
     }
+
+    public void JumpHor(bool jumpHor) => _jumpHor = jumpHor;
     #endregion
 
     #region HELPERS

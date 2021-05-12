@@ -15976,11 +15976,16 @@ MonoBehaviour:
   isSliding: 0
   _animator: {fileID: 2616901684095468913}
   _wallStickInstance: {fileID: 4553973598240407539}
-  _wallCheckDistanceYoffset: {fileID: 0}
-  _wallBackCheckDistance: {fileID: 0}
-  _wallCheckDistance: {fileID: 0}
   _gravity: {fileID: 11400000, guid: 24bde061a06913d429e704c1406c609d, type: 2}
+  _fallMultiplier: {fileID: 11400000, guid: 581b4a5d8a435c548849d91d12d304e2, type: 2}
+  _wallCheckDistanceYoffset: {fileID: 11400000, guid: 7a3bcf1549c6e384b9517fd72594590c, type: 2}
+  _wallBackCheckDistance: {fileID: 11400000, guid: 4d2d34ba11c888148830c759efd3d9b8, type: 2}
+  _jumpHorForce: {fileID: 11400000, guid: ca24d18cd5c050549b2db3ea9c38c71d, type: 2}
   _invisibleWall: {fileID: 3155821390835937877}
+  _OnSlide: {fileID: 11400000, guid: 432af78b82f2e7b4f8d6fb986b67eb49, type: 2}
+  _wallLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &2075380989
 GameObject:
   m_ObjectHideFlags: 0
@@ -16359,6 +16364,7 @@ MonoBehaviour:
   _groundCheckDistance: {fileID: 11400000, guid: d4598af45deb10548a3bec915965b99a, type: 2}
   _OnGrounded: {fileID: 11400000, guid: 1085da1041e9b6b48b3f10518cc2ff95, type: 2}
   _OnJump: {fileID: 11400000, guid: 5e5a3105b9335364ba0fac76e2c2250d, type: 2}
+  _climbing: {fileID: 2061310448}
 --- !u!114 &2616901683077495499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16422,7 +16428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2616901683077495505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4, y: -0.75, z: 0}
+  m_LocalPosition: {x: -3.43, y: -0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2616901684095468912}
@@ -16452,6 +16458,7 @@ MonoBehaviour:
   _acceleration: {fileID: 11400000, guid: 7621435ab72622b44a2f0009a58d4a4e, type: 2}
   _maxSpeed: {fileID: 11400000, guid: 83b89ae93cba31f4eb48af0f5cd9345c, type: 2}
   _deceleration: {fileID: 11400000, guid: fde6c1a3b80219840bfcfbdf2e021fe6, type: 2}
+  _isGrounded: 0
 --- !u!1 &2616901683077495505
 GameObject:
   m_ObjectHideFlags: 0
@@ -16472,6 +16479,7 @@ GameObject:
   - component: {fileID: 8975553720296556733}
   - component: {fileID: 5784253392835057798}
   - component: {fileID: 2061310447}
+  - component: {fileID: 2616901683077495506}
   - component: {fileID: 2061310448}
   m_Layer: 11
   m_Name: Player
@@ -16480,6 +16488,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2616901683077495506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616901683077495505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9d065bb3af0d84a977ae6d5095d8b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 432af78b82f2e7b4f8d6fb986b67eb49, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2616901683077495498}
+        m_TargetAssemblyTypeName: PlatformerJump, Assembly-CSharp
+        m_MethodName: WasSliding
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &2616901684095468912
 Transform:
   m_ObjectHideFlags: 0
@@ -24704,39 +24740,79 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 3155821392112630629}
     m_ColliderPaths:
+    - - X: 133119992
+        Y: 122880008
+      - X: 122880000
+        Y: 122880008
+      - X: 122880000
+        Y: 112640000
+      - X: 92160008
+        Y: 112640000
+      - X: 92160008
+        Y: 122880008
+      - X: 81920000
+        Y: 122880008
+      - X: 81920000
+        Y: 61440000
+      - X: 133119992
+        Y: 61440000
+    - - X: 163839984
+        Y: 102400008
+      - X: 153600000
+        Y: 102400008
+      - X: 153600000
+        Y: 92160008
+      - X: 163839984
+        Y: 92160008
+    - - X: 235520000
+        Y: 92160008
+      - X: 225280000
+        Y: 92160008
+      - X: 225280000
+        Y: 61440000
+      - X: 235520000
+        Y: 61440000
+    - - X: 225279984
+        Y: 92160008
+      - X: 215040000
+        Y: 92160008
+      - X: 215040000
+        Y: 61440000
+      - X: 225279984
+        Y: 61440000
+    - - X: 215039984
+        Y: 92160008
+      - X: 174080016
+        Y: 92160008
+      - X: 174080016
+        Y: 61440000
+      - X: 215039984
+        Y: 61440000
+    - - X: 174079984
+        Y: 92160008
+      - X: 163840000
+        Y: 92160008
+      - X: 163840000
+        Y: 81920000
+      - X: 174079984
+        Y: 81920000
+    - - X: 163839984
+        Y: 92160000
+      - X: 153600000
+        Y: 92160000
+      - X: 153600000
+        Y: 81920000
+      - X: 163839984
+        Y: 81920000
     - - X: 92160008
-        Y: 40959900
+        Y: 40960000
       - X: 122880000
-        Y: 40959900
+        Y: 40960000
       - X: 122880000
         Y: 30719998
       - X: 133119992
         Y: 30719998
       - X: 133119992
-        Y: 61439996
-      - X: 122880108
-        Y: 61439996
-      - X: 122880108
-        Y: 61440000
-      - X: 133119992
-        Y: 61440000
-      - X: 133119992
-        Y: 122880008
-      - X: 122880000
-        Y: 122880008
-      - X: 122880000
-        Y: 112640100
-      - X: 92160008
-        Y: 112640100
-      - X: 92160008
-        Y: 122880008
-      - X: 81920000
-        Y: 122880008
-      - X: 81920000
-        Y: 61440000
-      - X: 92159900
-        Y: 61440000
-      - X: 92159900
         Y: 61439996
       - X: 81920000
         Y: 61439996
@@ -24744,75 +24820,51 @@ CompositeCollider2D:
         Y: 30719998
       - X: 92160008
         Y: 30719998
-    - - X: 235520100
-        Y: -41
-      - X: 235520100
-        Y: 92160049
-      - X: 235520041
-        Y: 92160108
-      - X: 163839984
-        Y: 92160108
-      - X: 163839984
-        Y: 102400008
-      - X: 153600000
-        Y: 102400008
-      - X: 153600000
-        Y: 92160008
-      - X: 163839900
-        Y: 92160008
-      - X: 163839900
-        Y: 92160000
-      - X: 153600000
-        Y: 92160000
-      - X: 153600000
-        Y: 81920000
-      - X: 163839900
-        Y: 81920000
-      - X: 163839900
-        Y: 81919959
-      - X: 163839959
-        Y: 81919900
-      - X: 174080016
-        Y: 81919900
-      - X: 174080016
-        Y: 61440000
-      - X: 184319900
-        Y: 61440000
-      - X: 184319900
+    - - X: 235520000
+        Y: 61439996
+      - X: 225280000
+        Y: 61439996
+      - X: 225280000
+        Y: 0
+      - X: 235520000
+        Y: 0
+    - - X: 225279984
+        Y: 61439996
+      - X: 215040000
+        Y: 61439996
+      - X: 215040000
+        Y: 0
+      - X: 225279984
+        Y: 0
+    - - X: 215039984
         Y: 61439996
       - X: 174080016
         Y: 61439996
       - X: 174080016
         Y: 0
-      - X: 184319900
+      - X: 215039984
         Y: 0
-      - X: 184319900
-        Y: -41
-      - X: 184319959
-        Y: -100
-      - X: 235520041
-        Y: -100
   m_CompositePaths:
     m_Paths:
     - - {x: 9.215971, y: 3.0719998}
-      - {x: 9.21603, y: 4.09599}
-      - {x: 12.288, y: 4.0959606}
+      - {x: 9.21603, y: 4.096}
+      - {x: 12.288, y: 4.0959706}
       - {x: 12.28803, y: 3.0719998}
       - {x: 13.311999, y: 3.0720294}
       - {x: 13.31197, y: 12.288001}
       - {x: 12.288, y: 12.2879715}
-      - {x: 12.287971, y: 11.264009}
-      - {x: 9.216001, y: 11.264039}
+      - {x: 12.287971, y: 11.264}
+      - {x: 9.216001, y: 11.2640295}
       - {x: 9.215971, y: 12.288001}
       - {x: 8.192, y: 12.2879715}
       - {x: 8.19203, y: 3.0719998}
-    - - {x: 23.551975, y: -0.00001}
-      - {x: 23.551975, y: 9.216011}
-      - {x: 16.383999, y: 9.21604}
+    - - {x: 23.551971, y: 0}
+      - {x: 23.551971, y: 9.216001}
+      - {x: 16.383999, y: 9.21603}
       - {x: 16.38397, y: 10.240001}
       - {x: 15.360001, y: 10.239971}
       - {x: 15.360029, y: 8.192}
-      - {x: 17.408, y: 8.191961}
+      - {x: 17.408, y: 8.191971}
       - {x: 17.408031, y: 0}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
@@ -24883,6 +24935,7 @@ MonoBehaviour:
   _originalGroundCheckDistance: -0.43
   _groundCheckDistanceOffset: -1000
   _gravity: {fileID: 11400000, guid: 24bde061a06913d429e704c1406c609d, type: 2}
+  _fallMultiplier: {fileID: 11400000, guid: 581b4a5d8a435c548849d91d12d304e2, type: 2}
   _jumpHorForce: {fileID: 11400000, guid: ca24d18cd5c050549b2db3ea9c38c71d, type: 2}
   _wallCheckDistanceYoffset: {fileID: 11400000, guid: 7a3bcf1549c6e384b9517fd72594590c, type: 2}
   _wallCheckDistance: {fileID: 11400000, guid: e9d1648e14d78514fa1fff88a2d7f0c3, type: 2}
@@ -25005,6 +25058,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlatformerMovement, Assembly-CSharp
         m_MethodName: EnableControls
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2061310448}
+        m_TargetAssemblyTypeName: Climbing, Assembly-CSharp
+        m_MethodName: CancelSlide
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -66,7 +66,7 @@ public class PlatformerMovement : MonoBehaviour
     #endregion
 
     #region HELPERS
-    bool _isGrounded = false;
+    public bool _isGrounded = false;
     public void OnGrounded() => _isGrounded = true;
     public void OnJump() => _isGrounded = false;
     #endregion
