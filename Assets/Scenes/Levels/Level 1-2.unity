@@ -16424,8 +16424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d417f46b401df447a173ab70d5f9f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  climbingSpeed: 2500
-  delayTime: 0.3
+  climbingSpeed: 4250
+  delayTime: 0.2
   isClimbing: 0
   _rb: {fileID: 2616901683077495500}
   isSliding: 0
