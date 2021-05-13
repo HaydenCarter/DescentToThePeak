@@ -4,36 +4,25 @@ using UnityEngine;
 
 public class SilhouetteSprite : MonoBehaviour
 {
-    public Color ColorToSet;
-    public Color spriteColor;
-    public float lerpDuration = 3f;
-    public float endAlpha = 1f;
+    public Color ColorB;
+    public float speed = 3f;
+    public SpriteRenderer spriteRenderer;
+    public Color ColorA;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        spriteColor = GetComponent<SpriteRenderer>().color;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        ColorA = spriteRenderer.color;
     }
 
     public void ColourChange()
     {
-        StartCoroutine(LerpColour());
+        spriteRenderer.color = Color.Lerp(ColorA, ColorB, speed);
     }
     public void ReturnToNormal()
     {
-        Color ColorToLerp = new Color(1f, 1f, 1f, 1f);
+        Color ColorB = new Color(1f, 1f, 1f, 1f);
         ColourChange();
-    }
-    IEnumerator LerpColour()
-    {
-        Color spriteColor = GetComponent<SpriteRenderer>().color;
-        float timeElapsed = 0;
-
-        while (timeElapsed < lerpDuration)
-        {
-            spriteColor = Color.Lerp(spriteColor, ColorToSet, timeElapsed/lerpDuration);
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        }
-        spriteColor = new Color(spriteColor.r, spriteColor.g, spriteColor.b, endAlpha);
     }
 } 
