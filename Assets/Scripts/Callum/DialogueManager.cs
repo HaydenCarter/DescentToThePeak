@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.Playables;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -224,5 +225,9 @@ public class DialogueManager : MonoBehaviour
                 canInteract = false;
                 break;
         }
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
