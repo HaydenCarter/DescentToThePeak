@@ -146,7 +146,7 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case "textbox":
                     TextboxHide(param);
-                    break;
+                    break;                    
             }
         }
     }
@@ -216,6 +216,12 @@ public class DialogueManager : MonoBehaviour
             case "show":
                 textBox.transform.localScale = new Vector3(1, 1, 1);
                 canInteract = true;
+                break;
+            case "interactible":
+                canInteract = true;
+                break;
+            case "not_interactible":
+                canInteract = false;
                 break;
         }
     }

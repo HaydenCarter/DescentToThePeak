@@ -66,10 +66,20 @@ Tony's a good guy. And a good friend. He deserves better.
 #textbox hide
 ...
 #nametag Drake
-#timeline pause 
 #textbox show
+#textbox not_interactible
 Catch the lead while you can, bud.
 Don't let the sasquatch bite. 
+#textbox hide
+...
+#timeline pause
+#textbox show
+#nametag Joe
+#textbox interactible
+W...what?
 #timeline play
 #textbox hide
 ...
+#textbox show
+No - no, get away!
+Don't -
