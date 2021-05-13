@@ -16233,108 +16233,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1975870107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1975870108}
-  - component: {fileID: 1975870109}
-  - component: {fileID: 1975870110}
-  m_Layer: 11
-  m_Name: Stamina Wheel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1975870108
+--- !u!4 &1975870108 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+  m_PrefabInstance: {fileID: 8632895546651282550}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975870107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.67, y: 0.88, z: 0}
-  m_LocalScale: {x: 0.12, y: 0.12, z: 0}
-  m_Children: []
-  m_Father: {fileID: 2616901683077495502}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1975870109
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975870107}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: edd99dfbeacac894a8e38ef727585f95, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &1975870110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975870107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7b669dcf02117a4fb74f69e25770e9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stamina6: {fileID: 21300000, guid: edd99dfbeacac894a8e38ef727585f95, type: 3}
-  stamina5: {fileID: 21300000, guid: eb5fc4a8bea91e8449543e1f02a1ed25, type: 3}
-  stamina4: {fileID: 21300000, guid: c503d4f98e7bfcd48b97dde261686feb, type: 3}
-  stamina3: {fileID: 21300000, guid: 6bf9ac260d52efd49a3cb085acb54402, type: 3}
-  stamina2: {fileID: 21300000, guid: 32bcdb2ad83908e45883f83cb6656532, type: 3}
-  stamina1: {fileID: 21300000, guid: ebd0f9ec74bdf9241af9f3c7c6c74d22, type: 3}
-  stamina0: {fileID: 21300000, guid: 0f18bfd85a342274f9c955dbf3e488c2, type: 3}
 --- !u!114 &2061310447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16806,6 +16709,7 @@ MonoBehaviour:
   _groundCheckDistance: {fileID: 11400000, guid: d4598af45deb10548a3bec915965b99a, type: 2}
   _OnGrounded: {fileID: 11400000, guid: 1085da1041e9b6b48b3f10518cc2ff95, type: 2}
   _OnJump: {fileID: 11400000, guid: 5e5a3105b9335364ba0fac76e2c2250d, type: 2}
+  staminaWheel: {fileID: 8632895546651282551}
   _climbing: {fileID: 2061310448}
 --- !u!114 &2616901683077495499
 MonoBehaviour:
@@ -26186,6 +26090,7 @@ MonoBehaviour:
   _groundCheckDistance: {fileID: 11400000, guid: d4598af45deb10548a3bec915965b99a, type: 2}
   _OnWall: {fileID: 11400000, guid: 593dfcabe36956f43800a6a32c09353e, type: 2}
   _OnOffWall: {fileID: 11400000, guid: 17c74c1fda999094580c55ff5c781160, type: 2}
+  staminaWheel: {fileID: 8632895546651282551}
   _wallCheck: 0
   _backCheck: 0
   _invisibleWall: {fileID: 3155821390835937877}
@@ -26229,6 +26134,72 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &8632895546651282550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2616901683077495502}
+    m_Modifications:
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854381, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_Name
+      value: Stamina Wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854381, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+--- !u!1 &8632895546651282551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8632895546982854381, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+  m_PrefabInstance: {fileID: 8632895546651282550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8975553720296556674
 MonoBehaviour:
   m_ObjectHideFlags: 0

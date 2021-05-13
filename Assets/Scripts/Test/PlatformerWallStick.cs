@@ -28,6 +28,7 @@ public class PlatformerWallStick : MonoBehaviour
     [Header("---EVENTS---", order = 2)] //EVENTS
     [SerializeField] GameEvent _OnWall;
     [SerializeField] GameEvent _OnOffWall;
+    public GameObject staminaWheel;
     #endregion
 
     RaycastHit2D _wallHit;
@@ -88,6 +89,7 @@ public class PlatformerWallStick : MonoBehaviour
             _rb.gameObject.transform.eulerAngles = new Vector3(0, _rb.gameObject.transform.eulerAngles.y == 0 ? 180 : 0, 0);
             _OnWall.Invoke();
             _rb.velocity = Vector2.zero;
+            staminaWheel.SetActive(true);
             _rb.gravityScale = 0;
         }
 

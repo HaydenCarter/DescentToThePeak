@@ -25,6 +25,7 @@ public class PlatformerJump : MonoBehaviour
     [Header("---EVENTS---", order = 2)] //EVENTS
     [SerializeField] GameEvent _OnGrounded;
     [SerializeField] GameEvent _OnJump;
+    public GameObject staminaWheel;
     #endregion
 
     bool _wasJumping = false;
@@ -57,6 +58,7 @@ public class PlatformerJump : MonoBehaviour
             SetGrounded(true);
             SetOnWall(false);
             Universe.Instance.Stamina = Universe.Instance.MaxStamina;
+            staminaWheel.SetActive(false);
             _OnGrounded.Invoke();
         }
         if (!_groundCheckLeft && !_groundCheckRight)

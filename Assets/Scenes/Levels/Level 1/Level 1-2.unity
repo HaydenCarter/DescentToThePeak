@@ -5827,6 +5827,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!4 &487061482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+  m_PrefabInstance: {fileID: 1229677652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &780140949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6278,6 +6283,72 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1229677652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2616901683077495502}
+    m_Modifications:
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854378, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854381, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_Name
+      value: Stamina Wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632895546982854381, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+--- !u!1 &1229677653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8632895546982854381, guid: 141872bfc159ea348ba29aaf1844c5db, type: 3}
+  m_PrefabInstance: {fileID: 1229677652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1690006486
 GameObject:
   m_ObjectHideFlags: 0
@@ -16858,6 +16929,7 @@ MonoBehaviour:
   _groundCheckDistance: {fileID: 11400000, guid: d4598af45deb10548a3bec915965b99a, type: 2}
   _OnGrounded: {fileID: 11400000, guid: 1085da1041e9b6b48b3f10518cc2ff95, type: 2}
   _OnJump: {fileID: 11400000, guid: 5e5a3105b9335364ba0fac76e2c2250d, type: 2}
+  staminaWheel: {fileID: 1229677653}
   _climbing: {fileID: 2061310448}
 --- !u!114 &2616901683077495499
 MonoBehaviour:
@@ -16931,6 +17003,7 @@ Transform:
   - {fileID: 1848371487}
   - {fileID: 472534991}
   - {fileID: 1842691464}
+  - {fileID: 487061482}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26332,6 +26405,7 @@ MonoBehaviour:
   _groundCheckDistance: {fileID: 11400000, guid: d4598af45deb10548a3bec915965b99a, type: 2}
   _OnWall: {fileID: 11400000, guid: 593dfcabe36956f43800a6a32c09353e, type: 2}
   _OnOffWall: {fileID: 11400000, guid: 17c74c1fda999094580c55ff5c781160, type: 2}
+  staminaWheel: {fileID: 1229677653}
   _wallCheck: 0
   _backCheck: 0
   _invisibleWall: {fileID: 3155821390835937877}
