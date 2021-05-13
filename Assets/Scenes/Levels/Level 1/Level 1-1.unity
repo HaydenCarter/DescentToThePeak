@@ -20124,6 +20124,7 @@ MonoBehaviour:
   _wallBackCheckDistance: {fileID: 11400000, guid: 4d2d34ba11c888148830c759efd3d9b8, type: 2}
   _jumpHorForce: {fileID: 11400000, guid: ca24d18cd5c050549b2db3ea9c38c71d, type: 2}
   _invisibleWall: {fileID: 449996715}
+  staminaWheel: {fileID: 5133759873474381748}
   _OnSlide: {fileID: 11400000, guid: 432af78b82f2e7b4f8d6fb986b67eb49, type: 2}
   _wallLayer:
     serializedVersion: 2

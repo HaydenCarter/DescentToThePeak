@@ -22,6 +22,7 @@ public class Climbing : MonoBehaviour
     [SerializeField] SoFloat _jumpHorForce;
 
     [SerializeField] GameObject _invisibleWall;
+    public GameObject staminaWheel;
 
     public GameEvent _OnSlide;
 
@@ -36,7 +37,7 @@ public class Climbing : MonoBehaviour
     float direction;
     void Update()
     {
-        _backCheck = Physics2D.Raycast(
+            _backCheck = Physics2D.Raycast(
           new Vector2(transform.localPosition.x, transform.localPosition.y + _wallCheckDistanceYoffset.Value),
           new Vector2(transform.localRotation.y == 0 ? -_wallBackCheckDistance.Value : _wallBackCheckDistance.Value, 0),
           Mathf.Abs(_wallBackCheckDistance.Value),
@@ -50,6 +51,8 @@ public class Climbing : MonoBehaviour
 
         if (_backCheck)
         {
+            staminaWheel.SetActive(true);
+
             if (!_playMovement)
             {
                 if (_wallStickInstance._backCheck)
@@ -128,7 +131,6 @@ public class Climbing : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         if (_playMovement)
         {
-            Debug.Log("DEST REACHED");
             _rb.velocity = Vector2.zero;
             _playMovement = false;
         }
