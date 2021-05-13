@@ -72,14 +72,12 @@ Catch the lead while you can, bud.
 Don't let the sasquatch bite. 
 #textbox hide
 ...
-#timeline pause
 #textbox show
 #nametag Joe
-#textbox interactible
-W...what?
-#timeline play
-#textbox hide
-...
-#textbox show
-No - no, get away!
+#textbox not_interactible
+W...what? No - get away!
 Don't -
+#textbox hide
+this is all, 
+no more text
+you can't see this. 
