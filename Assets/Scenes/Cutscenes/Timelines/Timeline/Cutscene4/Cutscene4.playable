@@ -496,10 +496,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 8.999999999999996
+    m_Start: 18.50000000000001
     m_ClipIn: 0
     m_Asset: {fileID: -5511726596083448642}
-    m_Duration: 11.266666666666655
+    m_Duration: 4.733333333333309
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5195371840769847757}
     m_EaseInDuration: 0
@@ -1110,6 +1110,7 @@ MonoBehaviour:
     - {fileID: 5111880199675666800}
     - {fileID: -1654808485745413663}
     - {fileID: -7518732039402154519}
+    - {fileID: 7357636052212350663}
 --- !u!114 &2256598236734841677
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1288,7 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 11.95
+  m_Time: 18.50000000000001
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 492baf680dcc5ea46b116f41a325deeb, type: 2}
@@ -1449,6 +1450,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
   m_Name: ActivationPlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
+--- !u!114 &7357636052212350663
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 11.95
+  m_Retroactive: 0
+  m_EmitOnce: 1
+  m_Asset: {fileID: 11400000, guid: a662fc3f2bc350542ab817241d9bc77d, type: 2}
 --- !u!114 &7360008200129630736
 MonoBehaviour:
   m_ObjectHideFlags: 1

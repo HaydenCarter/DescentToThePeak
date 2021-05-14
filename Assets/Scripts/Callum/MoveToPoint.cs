@@ -12,7 +12,9 @@ public class MoveToPoint : MonoBehaviour
     public float speed;
     private Vector3 position;
     public bool moving;
+    public bool forceStop;
     public bool newMoveTrigger = false;
+
 
     private void Start()
     {
@@ -39,17 +41,29 @@ public class MoveToPoint : MonoBehaviour
                 MoveToNew();
             }
         }
+        if (forceStop == true)
+        {
+            transform.position = transform.position;
+        }
+            
     }
     public void Move()
     {
         Debug.Log("Bruh.");
         moving = true;
+        forceStop = false;
+    }
+    public void StopMoving()
+    {
+        moving = false;
+        forceStop = true;
     }
 
     public void MoveToNew()
     {
         if (moving == false)
         {
+            forceStop = false;
             if (currentEndMarker == endMarker1)
             {
                 currentEndMarker = endMarker2;
