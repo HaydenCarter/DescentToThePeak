@@ -13,7 +13,11 @@ public class InstantiateTimeline : MonoBehaviour
     }
     public void PlayTimeline()
     {
-        timeline.Play();
+        if (timeline != null)
+        {
+            timeline.Play();
+
+        }
     }
 
     public void PauseTimeline()

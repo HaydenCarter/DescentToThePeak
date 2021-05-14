@@ -24,10 +24,20 @@ public class Silhouette2 : MonoBehaviour
             Debug.Log("Change Color!");
         }
     }
-    public void ReturnToNormal()
+    public void SetBlack()
     {
-        Color ColorToLerp = new Color(1f, 1f, 1f);
-        ColorChange();
+        foreach (Vector3Int tilePosition in tilemap.cellBounds.allPositionsWithin)
+        {
+            tilemap.SetColor(tilePosition, new Color(15, 15, 15));
+        }
+
+            }
+    public void SetNormal()
+    {
+        foreach (Vector3Int tilePosition in tilemap.cellBounds.allPositionsWithin)
+        {
+            tilemap.SetColor(tilePosition, new Color(1, 1, 1));
+        }
     }
     IEnumerator LerpColour(Vector3Int tilePosition)
     {
