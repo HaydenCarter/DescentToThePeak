@@ -147,7 +147,7 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case "textbox":
                     TextboxHide(param);
-                    break;                    
+                    break;
             }
         }
     }
