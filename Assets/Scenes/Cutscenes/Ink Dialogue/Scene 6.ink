@@ -1,4 +1,6 @@
 #nametag Matthew
+#timeline pause
+#textbox show
 He's late.
 #nametag Tony
 He'll show up. Or he's made camp somewhere else instead of climbing in the dark.
@@ -52,7 +54,7 @@ I get it - but we wouldn't find him if we did. It's a big mountain.
 #nametag Matthew
 You just want to keep going?
 #nametag Tony
-He's got to have just dropped or broken the radio. Always been a klutz. But he's a smat guy. He's either right behind us, or has headed back to base camp.
+He's got to have just dropped or broken the radio. Always been a klutz. But he's a smart guy. He's either right behind us, or has headed back to base camp.
 #nametag Matthew
 Or he's lying somewhere with a broken leg.
 #nametag Tony

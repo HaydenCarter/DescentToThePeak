@@ -18,8 +18,8 @@ TagManager:
   - Character
   - Hazard
   - Environment
-  - 
-  - 
+  - Background
+  - Walkable
   - 
   - 
   - 
@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1663581461
+    locked: 0
+  - name: Walkable
+    uniqueID: 2222747341
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
