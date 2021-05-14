@@ -15,6 +15,10 @@ public class DialogueManager : MonoBehaviour
     public GameObject optionPanel;
     public bool canInteract;
     public PlayableDirector timeline;
+    public GameObject JoeSpeaks;
+    public GameObject TonySpeaks;
+    public GameObject DrakeSpeaks;
+    public GameObject MatthewSpeaks;
     static Story story;
     Text nametag;
     Text message;
@@ -31,6 +35,10 @@ public class DialogueManager : MonoBehaviour
         choiceSelected = null;
         timeline = GetComponent<PlayableDirector>();
         TextboxHide("hide");
+        JoeSpeaks.SetActive(false);
+        MatthewSpeaks.SetActive(false);
+        TonySpeaks.SetActive(false);
+        DrakeSpeaks.SetActive(false);
     }
 
     private void Update()
@@ -147,7 +155,7 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case "textbox":
                     TextboxHide(param);
-                    break;                    
+                    break;
             }
         }
     }
@@ -179,18 +187,46 @@ public class DialogueManager : MonoBehaviour
             case "Joe":
                 nametag.text = "Joe";
                 nametag.color = Color.yellow;
+                if (JoeSpeaks != null)
+                {
+                    JoeSpeaks.SetActive(true);
+                    MatthewSpeaks.SetActive(false);
+                    TonySpeaks.SetActive(false);
+                    DrakeSpeaks.SetActive(false);
+                }
                 break;
             case "Matthew":
                 nametag.text = "Matthew";
-                nametag.color = Color.blue;
+                nametag.color = new Color(150, 75, 0);
+                if (MatthewSpeaks != null)
+                {
+                    JoeSpeaks.SetActive(false);
+                    MatthewSpeaks.SetActive(true);
+                    TonySpeaks.SetActive(false);
+                    DrakeSpeaks.SetActive(false);
+                }
                 break;
             case "Tony":
                 nametag.text = "Tony";
                 nametag.color = Color.red;
+                if (TonySpeaks != null)
+                {
+                    JoeSpeaks.SetActive(false);
+                    MatthewSpeaks.SetActive(false);
+                    TonySpeaks.SetActive(true);
+                    DrakeSpeaks.SetActive(false);
+                }
                 break;
             case "Drake":
                 nametag.text = "Drake";
                 nametag.color = Color.green;
+                if (DrakeSpeaks != null)
+                {
+                    JoeSpeaks.SetActive(false);
+                    MatthewSpeaks.SetActive(false);
+                    TonySpeaks.SetActive(false);
+                    DrakeSpeaks.SetActive(true);
+                }
                 break;
         }
     }
@@ -213,6 +249,10 @@ public class DialogueManager : MonoBehaviour
             case "hide":
                 textBox.transform.localScale = new Vector3(0, 0, 0);
                 canInteract = false;
+                JoeSpeaks.SetActive(false);
+                MatthewSpeaks.SetActive(false);
+                TonySpeaks.SetActive(false);
+                DrakeSpeaks.SetActive(false);
                 break;
             case "show":
                 textBox.transform.localScale = new Vector3(1, 1, 1);

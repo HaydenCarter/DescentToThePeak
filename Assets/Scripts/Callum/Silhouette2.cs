@@ -36,15 +36,11 @@ public class Silhouette2 : MonoBehaviour
 
         while (timeElapsed < lerpDuration)
         {
-            lerpedColour = (Color.Lerp(lerpedColour, ColorToLerp, timeElapsed/lerpDuration));
-            tilemap.SetColor(tilePosition, lerpedColour);
+            lerpedColour = (Color.Lerp(lerpedColour, ColorToLerp, timeElapsed / lerpDuration));
             timeElapsed += Time.deltaTime;
-
+            tilemap.SetColor(tilePosition, lerpedColour);
             yield return null;
         }
-
-        lerpedColour = new Color(lerpedColour.r, lerpedColour.g, lerpedColour.b);
         tilemap.SetColor(tilePosition, lerpedColour);
-        tilemap.SetTileFlags(tilePosition, TileFlags.LockColor);
     }
 }
