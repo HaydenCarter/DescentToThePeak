@@ -5,9 +5,9 @@ using UnityEngine;
 public class SilhouetteSprite : MonoBehaviour
 {
     public Color ColorB;
-    public float speed = 1f;
     public SpriteRenderer spriteToChange;
     public Color ColorA;
+    public Color ColorC;
     public float lerpDuration = 3;
 
     // Start is called before the first frame update
@@ -19,6 +19,10 @@ public class SilhouetteSprite : MonoBehaviour
     public void ColourChange()
     {
         StartCoroutine(LerpFunction(ColorB, lerpDuration));
+    }
+    public void ColourChange2()    
+    {
+        StartCoroutine(LerpFunction(ColorC, lerpDuration));
     }
 
     IEnumerator LerpFunction(Color endValue, float duration)

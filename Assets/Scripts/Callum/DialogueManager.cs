@@ -35,6 +35,10 @@ public class DialogueManager : MonoBehaviour
         choiceSelected = null;
         timeline = GetComponent<PlayableDirector>();
         TextboxHide("hide");
+        JoeSpeaks.SetActive(false);
+        MatthewSpeaks.SetActive(false);
+        TonySpeaks.SetActive(false);
+        DrakeSpeaks.SetActive(false);
     }
 
     private void Update()
@@ -194,7 +198,7 @@ public class DialogueManager : MonoBehaviour
             case "Matthew":
                 nametag.text = "Matthew";
                 nametag.color = new Color(150, 75, 0);
-                if (JoeSpeaks != null)
+                if (MatthewSpeaks != null)
                 {
                     JoeSpeaks.SetActive(false);
                     MatthewSpeaks.SetActive(true);
@@ -205,7 +209,7 @@ public class DialogueManager : MonoBehaviour
             case "Tony":
                 nametag.text = "Tony";
                 nametag.color = Color.red;
-                if (JoeSpeaks != null)
+                if (TonySpeaks != null)
                 {
                     JoeSpeaks.SetActive(false);
                     MatthewSpeaks.SetActive(false);
@@ -216,7 +220,7 @@ public class DialogueManager : MonoBehaviour
             case "Drake":
                 nametag.text = "Drake";
                 nametag.color = Color.green;
-                if (JoeSpeaks != null)
+                if (DrakeSpeaks != null)
                 {
                     JoeSpeaks.SetActive(false);
                     MatthewSpeaks.SetActive(false);
