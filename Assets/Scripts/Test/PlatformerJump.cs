@@ -45,8 +45,8 @@ public class PlatformerJump : MonoBehaviour
     bool _grounded = true, _groundCheckLeft = false, _groundCheckRight = false;
     void GroundCheck()
     {
-        _groundCheckLeft = SingleGroundCheck(transform.localPosition.x - _groundCheckOffset);
-        _groundCheckRight = SingleGroundCheck(transform.localPosition.x + _groundCheckOffset);
+        _groundCheckLeft = SingleGroundCheck(transform.position.x - _groundCheckOffset);
+        _groundCheckRight = SingleGroundCheck(transform.position.x + _groundCheckOffset);
         if (_groundCheckLeft || _groundCheckRight)
         {
             if(_wasJumping && _groundCheckDistance.Value > -1)
@@ -94,7 +94,7 @@ public class PlatformerJump : MonoBehaviour
     bool SingleGroundCheck(float xPos)
     {
         return Physics2D.Raycast(
-          new Vector2(xPos, transform.localPosition.y),
+          new Vector2(xPos, transform.position.y),
           new Vector2(0, _groundCheckDistance.Value),
           Mathf.Abs(_groundCheckDistance.Value),
           _groundLayer);
@@ -154,8 +154,8 @@ public class PlatformerJump : MonoBehaviour
     #region GIZMOS
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(new Vector2(transform.localPosition.x - _groundCheckOffset, transform.localPosition.y), new Vector2(0, _groundCheckDistance.Value));
-        Gizmos.DrawRay(new Vector2(transform.localPosition.x + _groundCheckOffset, transform.localPosition.y), new Vector2(0, _groundCheckDistance.Value));
+        Gizmos.DrawRay(new Vector2(transform.position.x - _groundCheckOffset, transform.position.y), new Vector2(0, _groundCheckDistance.Value));
+        Gizmos.DrawRay(new Vector2(transform.position.x + _groundCheckOffset, transform.position.y), new Vector2(0, _groundCheckDistance.Value));
     }
     #endregion
 }
