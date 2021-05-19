@@ -35,10 +35,20 @@ public class DialogueManager : MonoBehaviour
         choiceSelected = null;
         timeline = GetComponent<PlayableDirector>();
         TextboxHide("hide");
-        JoeSpeaks.SetActive(false);
-        MatthewSpeaks.SetActive(false);
-        TonySpeaks.SetActive(false);
-        DrakeSpeaks.SetActive(false);
+        if (JoeSpeaks != null)
+        { JoeSpeaks.SetActive(false); }
+        if (MatthewSpeaks != null)
+        {
+            MatthewSpeaks.SetActive(false);
+        }
+        if (TonySpeaks != null)
+        {
+            TonySpeaks.SetActive(false);
+        }
+        if (DrakeSpeaks != null)
+        {
+            DrakeSpeaks.SetActive(false);
+        }
     }
 
     private void Update()
