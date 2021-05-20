@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using UnityEditor.PackageManager;
 
 public class PostProcessingAnim : MonoBehaviour
 {
@@ -12,19 +11,25 @@ public class PostProcessingAnim : MonoBehaviour
     public float _chromaValue;
     public float _hueShiftValue;
     public float _tintValue;
+    public float _vignetteValue;
+    public float _sturationValue;
+    public float _lensDistValue;
   
 
     [Header("EFFECTS")]
     public ChromaticAberration _ca;
     public ColorGrading _colourShift;
+    public Vignette _vignette;
+    public LensDistortion _lensDistorter;
 
     private void Start()
     {
 
         _postProcessingVolumeHolder.profile.TryGetSettings(out _ca);
         _postProcessingVolumeHolder.profile.TryGetSettings(out _colourShift);
-        _chromaValue = _ca.intensity.value;
-       // _hueShiftValue = _colourShift.hueShift.value;
+        _postProcessingVolumeHolder.profile.TryGetSettings(out _vignette);
+        _postProcessingVolumeHolder.profile.TryGetSettings(out _lensDistorter);
+        
 
         
         
@@ -34,12 +39,18 @@ public class PostProcessingAnim : MonoBehaviour
     void Update()
     {
         //if (!isPaused)
-        //_ca.intensity.value = _chromaValue;
+        _ca.intensity.value = _chromaValue;
 
         _colourShift.hueShift.value = _hueShiftValue;
 
         _colourShift.tint.value = _tintValue;
 
         _colourShift.temperature.value = _tintValue * -1;
+
+        _vignette.intensity.value = _vignetteValue;
+
+        _colourShift.saturation.value = _sturationValue;
+
+        _lensDistorter.intensity.value = _lensDistValue;
     }
 }

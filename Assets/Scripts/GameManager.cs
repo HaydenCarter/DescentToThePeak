@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public GameObject Wendigo;
+
     private void Awake()
     {
         Instance = this;
@@ -25,6 +27,11 @@ public class GameManager : MonoBehaviour
     public void RegenStamina()
     {
         Universe.Instance.Stamina = Universe.Instance.MaxStamina;
+    }
+
+    public void MoveWendigo()
+    {
+        Wendigo.SetActive(true);
     }
 
 }
