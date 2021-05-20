@@ -12,14 +12,9 @@ Yeah. I...
 #nametag Tony
 #textbox show
 Gotta say, I'm impressed, man. I thought I was making pretty good time, too.
-#nametag Joe
-... right.
-#nametag Tony
-You're all set up and everything too. 
 You've been doing a great job keeping up.
 #nametag Joe
-Keeping up.
-Right, that's how you always see it.
+Keeping up. Right, that's how you always see it.
 #nametag Tony
 I mean, you were lagging pretty bad yesterday-
 #nametag Joe

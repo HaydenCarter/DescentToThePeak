@@ -3,16 +3,12 @@
 #nametag Drake
 I still don't get why you want us splitting up. 
 Usually the first rule is to stick together. 
-#nametag Joe
-Half the fun of any climb is the impulse. Finding your own path.
 #nametag Tony
 Can't resist turning everything into a race, can ya Joe. 
 #nametag Joe
 It's not a race. We're meeting at rendezvous points between each leg. 
 #nametag Drake
-Aww, no prizes for getting up first?
-#nametag Joe
-Getting up first IS the prize.
+So no prizes for getting up first?
 #nametag Tony
 I reckon it'll be fun. See you at first point, Joe.
 #timeline play
@@ -50,7 +46,6 @@ Tony just wants to spend time with you, man.
 #nametag Joe
 And he does it by making it all about him.
 #nametag Matthew
-You've been ghosting him pretty hard for a few years. 
 Relax, Joe. 
 This climb's still for us, yeah? Just ignore them if you want.
 ...
@@ -61,4 +56,4 @@ Not this time. I need to clear my head.
 If you're sure. 
 #timeline play
 #textbox hide
-(PAUSE)
+...

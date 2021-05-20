@@ -38,8 +38,6 @@ Don't what?
 #nametag Joe
 Need you. 
 Matt and I would've done this ourselves if you hadn't invited yourselves along.
-#nametag Drake
-Someone's a bit touchy.
 #timeline play
 #textbox hide
 (PAUSE)

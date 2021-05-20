@@ -10,8 +10,7 @@ We have to get out - it's coming, we can't -
 #nametag Tony
 What's coming? Is this about...
 #nametag Joe
-I saw it again - I think it's following me. 
-I think it followed me HERE. It won't - 
+I saw it again - I think it's following me. I think it followed me HERE. It won't - 
 #nametag Tony
 Joe... you're sounding a bit crazy, man. Just take a few breaths. I'm here. 
 Every monster story anyone's ever told - ghosts, werewolves, bigfoot...

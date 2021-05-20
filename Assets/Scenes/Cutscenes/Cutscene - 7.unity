@@ -342,6 +342,7 @@ MonoBehaviour:
   changeTimeSeconds: 0.5
   startAlpha: 0
   endAlpha: 1
+  ChangeTime2: 0
 --- !u!114 &180617235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,14 +512,6 @@ MonoBehaviour:
   endMarker2: {fileID: 0}
   endMarker3: {fileID: 0}
   endMarker4: {fileID: 0}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -862,14 +855,6 @@ MonoBehaviour:
   endMarker2: {fileID: 1199450133}
   endMarker3: {fileID: 1419056425}
   endMarker4: {fileID: 2105903856}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -2602,14 +2587,6 @@ MonoBehaviour:
   endMarker2: {fileID: 444169689}
   endMarker3: {fileID: 1771468667}
   endMarker4: {fileID: 0}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -2751,6 +2728,7 @@ MonoBehaviour:
   changeTimeSeconds: 3
   startAlpha: 0
   endAlpha: 1
+  ChangeTime2: 0
 --- !u!114 &1120257463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3191,7 +3169,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.57254905}
+      maxColor: {r: 0.7276166, g: 0.7830189, b: 0.77647364, a: 0.36862746}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3253,7 +3231,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 1000
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -8060,14 +8038,6 @@ MonoBehaviour:
   endMarker2: {fileID: 400922949}
   endMarker3: {fileID: 1919330593}
   endMarker4: {fileID: 305536880}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -8772,14 +8742,6 @@ MonoBehaviour:
   endMarker2: {fileID: 444169689}
   endMarker3: {fileID: 1771468667}
   endMarker4: {fileID: 0}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -9210,6 +9172,7 @@ MonoBehaviour:
   changeTimeSeconds: 3
   startAlpha: 0
   endAlpha: 1
+  ChangeTime2: 0
 --- !u!225 &1964394840
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9962,14 +9925,6 @@ MonoBehaviour:
   endMarker2: {fileID: 400922949}
   endMarker3: {fileID: 1919330593}
   endMarker4: {fileID: 305536880}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0

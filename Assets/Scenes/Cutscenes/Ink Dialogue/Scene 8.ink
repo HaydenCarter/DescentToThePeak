@@ -1,10 +1,3 @@
-#nametag Matthew
-#textbox show
-#timeline pause
-Joe? Joe, c'mon. 
-#timeline play
-#textbox hide
-...
 #timeline pause
 #textbox show
 Joe? Joe, c'mon.

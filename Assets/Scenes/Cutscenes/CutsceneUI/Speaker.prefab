@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 384599747333065438}
   - component: {fileID: 773503651755758850}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpeakerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
