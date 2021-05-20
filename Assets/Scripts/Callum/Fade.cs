@@ -7,6 +7,7 @@ public class Fade : MonoBehaviour
     public float changeTimeSeconds = 5;
     public float startAlpha = 0;
     public float endAlpha = 1;
+    public float ChangeTime2;
 
     float changeRate = 0;
     float timeSoFar = 0;
@@ -67,7 +68,10 @@ public class Fade : MonoBehaviour
         }
     }
 
-
+    public void SetSpeed()
+    {
+        changeTimeSeconds = ChangeTime2;
+            }
 
     public void SetAlpha(float alpha)
     {

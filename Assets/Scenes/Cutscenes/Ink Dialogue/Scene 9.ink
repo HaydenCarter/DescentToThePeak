@@ -40,7 +40,7 @@ We were always going to <b>do this together</b>.
 #timeline pause
 #textbox show
 #nametag Matthew
-Joe - you know I was <b><i>only here for you</b></i>, right?
+Joe - you know I was <b>only here for you</b>, right?
 #nametag Joe
 <i>I</i> don't <i>need you</i>
 #timeline play

@@ -9,14 +9,6 @@ public class MoveToPoint : MonoBehaviour
     public Transform endMarker2 = null;
     public Transform endMarker3 = null;
     public Transform endMarker4 = null;
-    public Transform endMarker5 = null;
-    public Transform endMarker6 = null;
-    public Transform endMarker7 = null;
-    public Transform endMarker8 = null;
-    public Transform endMarker9 = null;
-    public Transform endMarker10 = null;
-    public Transform endMarker11 = null;
-    public Transform endMarker12 = null;
 
 
     public float speed;
@@ -94,43 +86,7 @@ public class MoveToPoint : MonoBehaviour
             }
             else if (currentEndMarker == endMarker4)
             {
-                currentEndMarker = endMarker5;
-                moving = true;
-            }
-            else if (currentEndMarker == endMarker5)
-            {
-                currentEndMarker = endMarker6;
-                moving = true;
-            }
-            else if (currentEndMarker == endMarker6)
-            {
-                currentEndMarker = endMarker7;
-                moving = true;
-            }
-            else if (currentEndMarker == endMarker7)
-            {
-                currentEndMarker = endMarker8;
-                moving = true;
-            }
-            else if (currentEndMarker == endMarker8)
-            {
-                currentEndMarker = endMarker9;
-                moving = true;
-            }
-            else if (currentEndMarker == endMarker9)
-            {
-                currentEndMarker = endMarker10;
-                moving = true;
-            }
-            else if (currentEndMarker == endMarker10)
-            {
-                currentEndMarker = endMarker11;
-                moving = true;
-            }
-            else if (currentEndMarker == endMarker11)
-            {
-                currentEndMarker = endMarker12;
-                moving = true;
+                moving = false;
             }
         }
         else if (moving == true)
