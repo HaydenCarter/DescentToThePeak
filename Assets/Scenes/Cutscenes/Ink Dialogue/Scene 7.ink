@@ -1,8 +1,8 @@
 #nametag Joe
 #textbox show
 #timeline pause
-Tony - Tony, we have to get out. 
-It's here, it -
+Tony?
+Tony, we have to get out. It's here, it -
 #nametag Tony
 Calm down, man. You're not making sense.
 #nametag Joe
@@ -13,9 +13,7 @@ What's coming? Is this about...
 I saw it again - I think it's following me. 
 I think it followed me HERE. It won't - 
 #nametag Tony
-Joe... you're sounding a bit crazy, man. 
-Just take a few breaths. 
-I'm here. 
+Joe... you're sounding a bit crazy, man. Just take a few breaths. I'm here. 
 Every monster story anyone's ever told - ghosts, werewolves, bigfoot...
 I've heard them all, man. And none of them are real.
 #nametag Joe
@@ -32,11 +30,9 @@ It's something about the isolation. Lets you get up in your own head.
 #nametag Joe
 It's... it's not like that. I know what I saw.
 #nametag Tony
-Just keep breathing, man. We'll keep going together. 
-No matter how old you get, I'm still gonna be here to chase the monsters away. 
+Just keep breathing, man. We'll keep going together. No matter how old you get, I'm still gonna be here to chase the monsters away. 
 #nametag Joe
-You can't - you can't just do that!
-Say you'll fix everything. You can't. 
+You can't - you can't just do that!Say you'll fix everything. You can't. 
 #nametag Tony
 I'm trying to help you -
 #nametag Joe
