@@ -56,4 +56,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscenes/Cutscene - 7.unity
     guid: d2cd8e4619a41544592ed72d9a73daa5
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Cutscene - 8.unity
+    guid: 32700d32140d3944f9c973a1fb2a2746
   m_configObjects: {}

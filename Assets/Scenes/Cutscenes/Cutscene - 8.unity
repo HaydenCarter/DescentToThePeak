@@ -523,7 +523,16 @@ MonoBehaviour:
   endMarker2: {fileID: 1199450133}
   endMarker3: {fileID: 1419056425}
   endMarker4: {fileID: 2105903856}
+  endMarker5: {fileID: 0}
+  endMarker6: {fileID: 0}
+  endMarker7: {fileID: 0}
+  endMarker8: {fileID: 0}
+  endMarker9: {fileID: 0}
+  endMarker10: {fileID: 0}
+  endMarker11: {fileID: 0}
+  endMarker12: {fileID: 0}
   speed: 2
+  newSpeed: 0
   moving: 0
   forceStop: 0
   newMoveTrigger: 0
@@ -882,7 +891,16 @@ MonoBehaviour:
   endMarker2: {fileID: 1199450133}
   endMarker3: {fileID: 1419056425}
   endMarker4: {fileID: 2105903856}
+  endMarker5: {fileID: 0}
+  endMarker6: {fileID: 0}
+  endMarker7: {fileID: 0}
+  endMarker8: {fileID: 0}
+  endMarker9: {fileID: 0}
+  endMarker10: {fileID: 0}
+  endMarker11: {fileID: 0}
+  endMarker12: {fileID: 0}
   speed: 2
+  newSpeed: 0
   moving: 0
   forceStop: 0
   newMoveTrigger: 0
@@ -2777,7 +2795,16 @@ MonoBehaviour:
   endMarker2: {fileID: 444169689}
   endMarker3: {fileID: 1771468667}
   endMarker4: {fileID: 0}
+  endMarker5: {fileID: 0}
+  endMarker6: {fileID: 0}
+  endMarker7: {fileID: 0}
+  endMarker8: {fileID: 0}
+  endMarker9: {fileID: 0}
+  endMarker10: {fileID: 0}
+  endMarker11: {fileID: 0}
+  endMarker12: {fileID: 0}
   speed: 2
+  newSpeed: 0
   moving: 0
   forceStop: 0
   newMoveTrigger: 0
@@ -3060,6 +3087,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973b6084801ad564d8281f46a268efb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1136015982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1996845782}
+    m_Modifications:
+    - target: {fileID: 2537016612535684658, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_Name
+      value: Backgroundpicture
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684668, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1663581461
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684668, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684668, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b1b10711d8760eb4395bc7420dd820db, type: 3}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+--- !u!4 &1136015983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2537016612535684669, guid: 3c3d67a5640c6b84eb9eb4bc0af0268c, type: 3}
+  m_PrefabInstance: {fileID: 1136015982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1199450132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,7 +3867,16 @@ MonoBehaviour:
   endMarker2: {fileID: 444169689}
   endMarker3: {fileID: 1771468667}
   endMarker4: {fileID: 0}
+  endMarker5: {fileID: 0}
+  endMarker6: {fileID: 0}
+  endMarker7: {fileID: 0}
+  endMarker8: {fileID: 0}
+  endMarker9: {fileID: 0}
+  endMarker10: {fileID: 0}
+  endMarker11: {fileID: 0}
+  endMarker12: {fileID: 0}
   speed: 2
+  newSpeed: 0
   moving: 0
   forceStop: 0
   newMoveTrigger: 0
@@ -4147,7 +4265,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1136015983}
   m_Father: {fileID: 505135044}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5331,7 +5450,16 @@ MonoBehaviour:
   endMarker2: {fileID: 400922949}
   endMarker3: {fileID: 1919330593}
   endMarker4: {fileID: 305536880}
+  endMarker5: {fileID: 0}
+  endMarker6: {fileID: 0}
+  endMarker7: {fileID: 0}
+  endMarker8: {fileID: 0}
+  endMarker9: {fileID: 0}
+  endMarker10: {fileID: 0}
+  endMarker11: {fileID: 0}
+  endMarker12: {fileID: 0}
   speed: 2
+  newSpeed: 0
   moving: 0
   forceStop: 0
   newMoveTrigger: 0
