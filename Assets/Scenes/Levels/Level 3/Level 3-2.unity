@@ -5573,7 +5573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439494963365752208, guid: 7a019fbef1f80614da73271b90cfed8d, type: 3}
       propertyPath: followSpeed
-      value: 5.5
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 8439494963365752208, guid: 7a019fbef1f80614da73271b90cfed8d, type: 3}
       propertyPath: points.Array.data[3]
