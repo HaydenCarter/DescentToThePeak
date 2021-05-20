@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6707422938420127058, guid: c477b10479a1f1b4a92a94a9801d27ca, type: 3}
       propertyPath: _grainsize
-      value: 3
+      value: 85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c477b10479a1f1b4a92a94a9801d27ca, type: 3}
