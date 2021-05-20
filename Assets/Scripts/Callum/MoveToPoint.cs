@@ -16,7 +16,7 @@ public class MoveToPoint : MonoBehaviour
     public bool newMoveTrigger = false;
 
 
-    private void Start()
+    private void Awake()
     {
         position = gameObject.transform.position;
         moving = false;

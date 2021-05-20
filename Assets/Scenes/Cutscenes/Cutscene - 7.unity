@@ -425,11 +425,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEndMarker: {fileID: 0}
-  endMarker1: {fileID: 607548884}
+  endMarker1: {fileID: 1602623449}
   endMarker2: {fileID: 0}
   endMarker3: {fileID: 0}
   endMarker4: {fileID: 0}
-  speed: 0
+  speed: 2
   moving: 0
   forceStop: 0
   newMoveTrigger: 0
