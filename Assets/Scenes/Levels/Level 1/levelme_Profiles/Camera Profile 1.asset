@@ -50,7 +50,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.191
   fastMode:
     overrideState: 0
     value: 0
@@ -66,27 +66,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
   m_Name: LensDistortion
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: -100
+    value: -32
   intensityX:
-    overrideState: 1
+    overrideState: 0
     value: 0
   intensityY:
-    overrideState: 1
+    overrideState: 0
     value: 1
   centerX:
-    overrideState: 1
+    overrideState: 0
     value: 1
   centerY:
-    overrideState: 1
+    overrideState: 0
     value: 0.02
   scale:
-    overrideState: 1
+    overrideState: 0
     value: 0.79
 --- !u!114 &-5104148585961389315
 MonoBehaviour:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -203,17 +203,17 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 21
   tint:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 10
   colorFilter:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 180
   saturation:
     overrideState: 0
     value: 0
