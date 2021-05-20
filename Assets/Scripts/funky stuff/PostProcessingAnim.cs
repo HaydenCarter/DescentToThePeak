@@ -6,7 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class PostProcessingAnim : MonoBehaviour
 {
     public PostProcessVolume _postProcessingVolumeHolder;
-    public float _ca_min, _ca_max, _cs_min, _cs_max;
+    //public float _ca_min, _ca_max, _cs_min, _cs_max;
 
     public float _chromaValue;
     public float _hueShiftValue;
@@ -14,6 +14,9 @@ public class PostProcessingAnim : MonoBehaviour
     public float _vignetteValue;
     public float _sturationValue;
     public float _lensDistValue;
+    public float _grainValue;
+    public float _contrastValue;
+    public float _grainsize;
   
 
     [Header("EFFECTS")]
@@ -21,6 +24,7 @@ public class PostProcessingAnim : MonoBehaviour
     public ColorGrading _colourShift;
     public Vignette _vignette;
     public LensDistortion _lensDistorter;
+    public Grain _grain;
 
     private void Start()
     {
@@ -29,10 +33,9 @@ public class PostProcessingAnim : MonoBehaviour
         _postProcessingVolumeHolder.profile.TryGetSettings(out _colourShift);
         _postProcessingVolumeHolder.profile.TryGetSettings(out _vignette);
         _postProcessingVolumeHolder.profile.TryGetSettings(out _lensDistorter);
+        _postProcessingVolumeHolder.profile.TryGetSettings(out _grain);
         
 
-        
-        
     }
 
     // Update is called once per frame
@@ -52,5 +55,11 @@ public class PostProcessingAnim : MonoBehaviour
         _colourShift.saturation.value = _sturationValue;
 
         _lensDistorter.intensity.value = _lensDistValue;
+
+        _colourShift.contrast.value = _contrastValue;
+
+        _grain.intensity.value = _grainValue;
+
+        _grain.size.value = _grainsize;
     }
 }

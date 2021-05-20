@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Silhouette2 : MonoBehaviour
+public class Silhouette3 : MonoBehaviour
 {
     private Tilemap tilemap;
     public Color ColorToLerp;
     public float lerpDuration = 3f;
-
-    private void Awake()
+    void Start()
     {
         tilemap = GetComponent<Tilemap>();
-    }
-
-    void Start()
-    {      
         foreach (Vector3Int tilePosition in tilemap.cellBounds.allPositionsWithin)
         {
             tilemap.RemoveTileFlags(tilePosition, TileFlags.LockColor);
@@ -33,12 +28,10 @@ public class Silhouette2 : MonoBehaviour
     {
         foreach (Vector3Int tilePosition in tilemap.cellBounds.allPositionsWithin)
         {
-            var col = tilemap.GetColor(tilePosition);
-            col = (Color.Lerp(col, new Color(0,0,0,1), 0.1f));
-            tilemap.SetColor(tilePosition, col);
+            tilemap.SetColor(tilePosition, new Color(15, 15, 15));
         }
 
-    }
+            }
     public void SetNormal()
     {
         foreach (Vector3Int tilePosition in tilemap.cellBounds.allPositionsWithin)
