@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: posprocessmanager
       objectReference: {fileID: 0}
+    - target: {fileID: 6707422938420127058, guid: c477b10479a1f1b4a92a94a9801d27ca, type: 3}
+      propertyPath: _lensDistValue
+      value: 36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c477b10479a1f1b4a92a94a9801d27ca, type: 3}
 --- !u!198 &472534989
@@ -5360,6 +5364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cad151feaf13314f9d19ac21723a1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Wendigo: {fileID: 0}
 --- !u!114 &994904663
 MonoBehaviour:
   m_ObjectHideFlags: 0

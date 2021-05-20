@@ -13,12 +13,14 @@ public class PostProcessingAnim : MonoBehaviour
     public float _tintValue;
     public float _vignetteValue;
     public float _sturationValue;
+    public float _lensDistValue;
   
 
     [Header("EFFECTS")]
     public ChromaticAberration _ca;
     public ColorGrading _colourShift;
     public Vignette _vignette;
+    public LensDistortion _lensDistorter;
 
     private void Start()
     {
@@ -26,8 +28,8 @@ public class PostProcessingAnim : MonoBehaviour
         _postProcessingVolumeHolder.profile.TryGetSettings(out _ca);
         _postProcessingVolumeHolder.profile.TryGetSettings(out _colourShift);
         _postProcessingVolumeHolder.profile.TryGetSettings(out _vignette);
-        _chromaValue = _ca.intensity.value;
-       // _hueShiftValue = _colourShift.hueShift.value;
+        _postProcessingVolumeHolder.profile.TryGetSettings(out _lensDistorter);
+        
 
         
         
@@ -48,5 +50,7 @@ public class PostProcessingAnim : MonoBehaviour
         _vignette.intensity.value = _vignetteValue;
 
         _colourShift.saturation.value = _sturationValue;
+
+        _lensDistorter.intensity.value = _lensDistValue;
     }
 }
