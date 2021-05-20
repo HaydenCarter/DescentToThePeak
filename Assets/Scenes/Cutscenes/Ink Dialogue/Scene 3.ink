@@ -26,30 +26,19 @@ Good thing it wasn't a race, eh?
 #nametag Tony
 That bad, huh?
 #nametag Drake
-Ours was easy. Nothing to Everest
-#nametag Tony
-I've always had a good eye for picking the right path.
-#nametag Joe
-Lucky you.
+Ours was easy. Nothing to Everest.
 #nametag Tony
 You don't need to beat yourself up about coming in last.
 Every climber runs into a rough patch now and then...
 #nametag Joe
-Matt. Did you... see anything weird on your way up?
-#nametag Matthew
-Weird how?
-#nametag Joe
+Hey, Matt. Did you... see anything weird on your way up?
 While I was on the way up... I swear I saw someone out in the snow. 
-#nametag Drake
-Spooky.
 #nametag Matthew
 You sure?
 #nametag Joe
 I dunno. It was definitely something big moving, though.
 #nametag Matthew
 There bears on this mountain?
-#nametag Joe
-It... wasn't an animal. 
 #nametag Tony
 There's no other climbers up here right now, we checked. 
 And no-one else has a reason to come up this far.

@@ -523,14 +523,6 @@ MonoBehaviour:
   endMarker2: {fileID: 1199450133}
   endMarker3: {fileID: 1419056425}
   endMarker4: {fileID: 2105903856}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -891,14 +883,6 @@ MonoBehaviour:
   endMarker2: {fileID: 1199450133}
   endMarker3: {fileID: 1419056425}
   endMarker4: {fileID: 2105903856}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -3009,14 +2993,6 @@ MonoBehaviour:
   endMarker2: {fileID: 444169689}
   endMarker3: {fileID: 1771468667}
   endMarker4: {fileID: 0}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -3195,6 +3171,7 @@ MonoBehaviour:
   changeTimeSeconds: 3
   startAlpha: 0
   endAlpha: 1
+  ChangeTime2: 0
 --- !u!114 &1120257463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3768,14 +3745,6 @@ MonoBehaviour:
   endMarker2: {fileID: 400922949}
   endMarker3: {fileID: 1919330593}
   endMarker4: {fileID: 305536880}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -4153,14 +4122,6 @@ MonoBehaviour:
   endMarker2: {fileID: 444169689}
   endMarker3: {fileID: 1771468667}
   endMarker4: {fileID: 0}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
@@ -4460,6 +4421,7 @@ MonoBehaviour:
   changeTimeSeconds: 3
   startAlpha: 0
   endAlpha: 1
+  ChangeTime2: 0
 --- !u!225 &1964394840
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5675,7 +5637,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dfaefb3caf0cf3546b157c70b02563a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67f98256b938ecf478b3d0afb6b3ea0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5953,14 +5915,6 @@ MonoBehaviour:
   endMarker2: {fileID: 400922949}
   endMarker3: {fileID: 1919330593}
   endMarker4: {fileID: 305536880}
-  endMarker5: {fileID: 0}
-  endMarker6: {fileID: 0}
-  endMarker7: {fileID: 0}
-  endMarker8: {fileID: 0}
-  endMarker9: {fileID: 0}
-  endMarker10: {fileID: 0}
-  endMarker11: {fileID: 0}
-  endMarker12: {fileID: 0}
   speed: 2
   newSpeed: 0
   moving: 0
