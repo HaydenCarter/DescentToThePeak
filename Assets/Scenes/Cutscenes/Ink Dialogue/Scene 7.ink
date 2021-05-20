@@ -1,6 +1,6 @@
 #nametag Joe
+#textbox show
 #timeline pause
-#textbox hide
 Tony - Tony, we have to get out. 
 It's here, it -
 #nametag Tony
