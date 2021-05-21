@@ -18,20 +18,21 @@ I've heard them all, man. And none of them are real.
 #nametag Joe
 But - 
 #nametag Tony
-It's like - like lightning, making people believe in Zeus. 
-Making up stories to explain fear they don't understand.
-#nametag Joe
-YOU don't understand - 
-#nametag Tony
 In the end, it's all just people and the wild.
+#timeline play
+#textbox hide
+...
+#timeline pause
+#textbox show
 It's alright, Joe. I get it. I've been doing this longer than you, and I've had a couple scares too.
 It's something about the isolation. Lets you get up in your own head.
 #nametag Joe
 It's... it's not like that. I know what I saw.
 #nametag Tony
-Just keep breathing, man. We'll keep going together. No matter how old you get, I'm still gonna be here to chase the monsters away. 
+Just keep breathing, man. We'll keep going together.
+No matter how old you get, I'm still gonna be here to chase the monsters away. 
 #nametag Joe
-You can't - you can't just do that!Say you'll fix everything. You can't. 
+You can't - you can't just do that! Say you'll fix everything. You can't. 
 #nametag Tony
 I'm trying to help you -
 #nametag Joe
