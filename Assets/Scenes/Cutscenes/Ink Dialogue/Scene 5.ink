@@ -23,9 +23,12 @@ I'm not here to play catch-up! This wasn't -
 #nametag Matthew
 Anyone here?
 #nametag Tony
+#timeline pause
 Matt - good to see you. Come over to the fire, man, warm up a bit.
 #nametag Joe
 ...
 #nametag Tony
 Just waiting on Drake now.
 #textbox hide
+#timeline play
+...
