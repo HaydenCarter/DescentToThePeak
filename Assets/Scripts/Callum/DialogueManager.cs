@@ -207,7 +207,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             case "Matthew":
                 nametag.text = "Matthew";
-                nametag.color = new Color(150, 75, 0);
+                nametag.color = new Color(.4f, .2f, 0f);
                 if (MatthewSpeaks != null)
                 {
                     JoeSpeaks.SetActive(false);
